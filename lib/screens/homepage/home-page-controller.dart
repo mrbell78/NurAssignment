@@ -26,4 +26,20 @@ class HomePageController extends ChangeNotifier{
     notifyListeners();
   }
 
+
+ /* createAccount() async{
+
+
+    var apiResponse = await _apiService.crteateAccount("accounts");
+    if (apiResponse.httpCode == 200) {
+      if (apiResponse.data != null) {
+        responseDomainlist=apiResponse.data;
+        print("the code is --------${apiResponse.httpCode}");
+      }
+    } else {
+      print("${apiResponse.message}");
+    }
+    notifyListeners();
+  }*/
+
 }

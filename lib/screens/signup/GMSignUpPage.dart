@@ -16,6 +16,7 @@ class GMSignUpPage extends StatelessWidget {
   // That getx controller
   @override
   Widget build(BuildContext context) {
+    Provider.of<SignupController>(context, listen: false);
     return Consumer<SignupController>(
       builder: (context,provider,child){
         return Scaffold(
@@ -110,6 +111,7 @@ class GMSignUpPage extends StatelessWidget {
                               controller: provider.emailtext,
                               hintText: "ex: someone@solarunited.net",
                               prefixIcon: Icons.email,
+
                             ),
                             CustomTextField(
                               hintText: "Password",
@@ -123,12 +125,12 @@ class GMSignUpPage extends StatelessWidget {
                               buttonName: "Sign In",
                               paddingH: 35.0,
                               onPress: ()async{
-                                var submit = await provider.createAccount();
-                                if(submit.success){
-                                  print("account created");
-                                }else {
-                                  print("account creation faield");
-                                }
+                                await provider.createAccount();
+                                print("account created");
+                                Navigator.pop(context);
+
+
+
                               },
                             ),
                             Spacer(),
@@ -148,7 +150,7 @@ class GMSignUpPage extends StatelessWidget {
               ),
             ),
           ),
-        )
+        );
       },
 
     );

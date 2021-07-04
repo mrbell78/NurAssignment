@@ -2,6 +2,7 @@ import 'package:get_storage/get_storage.dart';
 
 class SPUtil{
   static String KEY_AUTH_TOKEN = "KEY_AUTH_TOKEN";
+  
 
   setValue(String key, String value) async {
     // SharedPreferences prefs = await SharedPreferences.getInstance();

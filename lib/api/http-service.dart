@@ -19,11 +19,13 @@ class HttpService {
         InterceptorsWrapper(
           onRequest: (RequestOptions options, RequestInterceptorHandler handler) async {
             var token = spUtil.getValue(SPUtil.KEY_AUTH_TOKEN);
+
             if (token != null) {
               print(("token : " + token));
               options.headers = {
-                "Content-Type": "application/json",
-                "Authorization": "Bearer  $token",
+                "Content-Type": "application/ld+json",
+                "Authorization": "Bearer $token",
+                "accept": "application/ld+json"
               };
             }
             return handler.next(options); //continue
