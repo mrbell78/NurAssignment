@@ -127,7 +127,7 @@ class GMSignUpPage extends StatelessWidget {
                                 if(submit.success){
                                   print("account created");
                                 }else {
-                                  print("account creation faield");
+                                  print("account creation fa");
                                 }
                               },
                             ),
@@ -148,7 +148,7 @@ class GMSignUpPage extends StatelessWidget {
               ),
             ),
           ),
-        )
+        );
       },
 
     );
