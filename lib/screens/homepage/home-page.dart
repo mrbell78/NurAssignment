@@ -13,20 +13,7 @@ class HomePage extends StatelessWidget{
         return Scaffold(
           body: Column(
             children: [
-              ListView.builder(
-                  shrinkWrap: true,
-                  itemBuilder: (context, index){
-                    return Container(
-                      margin: EdgeInsets.all(8),
-                      child: Card(
-                        child: ListTile(
-                          leading: Icon(Icons.domain),
-                          title: Text("${provider.responseDomainlist.hydraMember[index].domain}"),
-                        ),
-                      ),
 
-                    );
-                  })
 
             ],
           ),

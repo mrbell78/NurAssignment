@@ -1,5 +1,5 @@
 class ApiConstant{
 
 
-  static String BASE_URL = "https://api.mail.tm/domains/";
+  static String BASE_URL = "https://api.mail.tm/";
 }

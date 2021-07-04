@@ -14,10 +14,11 @@ class HomePageController extends ChangeNotifier{
   getDomain() async{
 
 
-    var apiResponse = await _apiService.getDomain("domain","1");
+    var apiResponse = await _apiService.getDomain("domains","1");
     if (apiResponse.httpCode == 200) {
       if (apiResponse.data != null) {
         responseDomainlist=apiResponse.data;
+        print("the code is --------${apiResponse.httpCode}");
       }
     } else {
       print("${apiResponse.message}");
